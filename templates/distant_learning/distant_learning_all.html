@@ -1,0 +1,22 @@
+{% load project_extras %}
+
+{% block content %}
+    {% for lesson in lessons %}
+    <div class="box">
+        <section class="hero is-primary is-medium">
+            <div class="hero-body">
+                <p class="title">{{ lesson.topic}}</p>
+                {{ lesson.additional_text }}
+            </div>
+        </section>
+
+        <div class="content intro">
+            <p>{{ post.intro }}</p>
+        </div>
+
+        <div class="content">
+            {{ lesson.main_text|convert_markdown|safe }}
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

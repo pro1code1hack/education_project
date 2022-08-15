@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+{% for lesson in lessons %}
+<h1>{{ lesson.additional_text }}</h1>
+    <p>{{ lesson.main_text }}</p>
+    <p>{{ lesson.group }}</p>
+    <p>{{ lesson.main_text }}</p>
+    <hr>
+    <p>{{ lesson.topic }}</p>
+{% endfor %}
+</body>
+</html>
