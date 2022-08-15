@@ -18,7 +18,7 @@ def login_action(request,pk):
     # back to login page
     else:
         quiz = Quiz.objects.get(pk=pk)
-        return render(request, 'quizes/noLogin.html', {'obj': quiz})
+        return render(request, 'noLogin.html', {'obj': quiz})
 
 
 def quiz_view(request, pk):
@@ -41,7 +41,8 @@ def quiz_data_view(request, pk):
 
 
 def save_quiz_view(request, pk):
-    if request.is_ajax():
+    print(request)
+    if request:
         questions = []
         data = request.POST
         data_ = dict(data.lists())

@@ -1,17 +1,8 @@
 {% extends "quizes.html" %}
 {% load static %}
-<meta http-equiv="refresh" content="1" >
+
 {% block scripts %}
     <script src="{% static 'quizes/quiz.js' %}" defer></script>
-    <script>
-    $(document).ready(function () {
-        // Handler for .ready() called.
-        window.setTimeout(function () {
-            location.href = "https://";
-        }, 1000);
-    });
-
-    </script>
 {% endblock scripts %}
 
 {% block title %}
