@@ -1,22 +1,33 @@
+{% extends 'base.html' %}
 {% load project_extras %}
 
 {% block content %}
+    <h1>==========</h1>
+    <a href="http://127.0.0.1:5050/distant_topics/1"><h2>Список всіх тем для дистанційних уроків для Монтажу СтСіУ</h2></a>
+    <a href="http://127.0.0.1:5050/distant_topics/2"><h2>Список всіх тем для дистанційних уроків для Зварювання</h2></a>
+    <h1>==========</h1>
+    <h4><a href="http://127.0.0.1:5050/distant_lessons/1">Перший курс</a></h4>
+    <h4><a href="http://127.0.0.1:5050/distant_lessons/2">Другий курс</a></h4>
     {% for lesson in lessons %}
-    <div class="box">
-        <section class="hero is-primary is-medium">
-            <div class="hero-body">
-                <p class="title">{{ lesson.topic}}</p>
-                {{ lesson.additional_text }}
+        <div class="box">
+            <section class="hero is-primary is-medium">
+                <div class="hero-body">
+                    <a href="http://127.0.0.1:5050/{{ request.path }}/1/"></a>
+                    {% comment %} Ссылка на конкретный урок{% endcomment %}
+                    <p class="title">{{ lesson.topic }}</p>
+                    {{ lesson.additional_text }}
+                </div>
+                <h1>================= Урок номер: {{ lesson.id }}===================</h1>
+                <a href="http://127.0.0.1:5050/distant_lessons/1/{{ lesson.id }}">Урок: {{ lesson.id }}</a>
+            </section>
+
+            <div class="content intro">
+                <p>{{ post.intro }}</p>
             </div>
-        </section>
 
-        <div class="content intro">
-            <p>{{ post.intro }}</p>
+            <div class="content">
+                {{ lesson.main_text|convert_markdown|safe }}
+            </div>
         </div>
-
-        <div class="content">
-            {{ lesson.main_text|convert_markdown|safe }}
-        </div>
-    </div>
     {% endfor %}
 {% endblock %}

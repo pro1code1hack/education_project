@@ -6,15 +6,19 @@ from .models import DistantLearningLesson
 
 # Create your views here.
 
-def distant_learning(request, grade=None):
-    if grade:
-        # get the group students for the given grade
-        #TODO ask on the forum if it is possible to write this query in one line
-        #TODO handle exceptions
-        grade_id = Grade.objects.get(number=grade)
-        group_students = GroupStudent.objects.filter(grade=grade_id)
-        lessons = DistantLearningLesson.objects.get(group__in=group_students)
-    else:
-        lessons = DistantLearningLesson.objects.all()
-        return render(request, 'distant_learning/distant_learning_all.html', {'lessons': lessons})
-    return render(request, "distant_learning/distant_learning_group.html", {"lessons": lessons})
+def distant_learning_course(request, course: int = None):
+    lessons = DistantLearningLesson.objects.filter(course=course)
+
+    return render(request, "distant_learning/distant_learning_all.html", {"lessons": lessons})
+
+
+def distant_learning_single(request, course: int = None, pk: int = None):
+    lessons = DistantLearningLesson.objects.filter(course=course, pk=pk)
+    print(lessons)
+    return render(request, 'distant_learning/distant_learning_single.html', {'lessons': lessons})
+
+
+def distant_learning_all_topics_course(request, course):
+    lessons = DistantLearningLesson.objects.filter(course=course)
+    print(lessons)
+    return render(request, 'distant_learning/distant_learning_topics.html', {'lessons': lessons})

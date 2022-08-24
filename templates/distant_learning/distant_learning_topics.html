@@ -1,0 +1,41 @@
+{# список всех тем для дистанционных уроков #}
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% block content %}
+
+    <ul>
+        <a href="http://127.0.0.1:5050/distant_topics/1"><h2>Список всіх тем для дистанційних уроків для Монтажу СтСіУ</h2></a>
+        <a href="http://127.0.0.1:5050/distant_topics/2"><h2>Список всіх тем для дистанційних уроків для Зварювання</h2></a>
+
+        <a href="http://127.0.0.1:5050/distant_lessons/1/"><h3>Дистанційні уроки для Монтаж СтСіУ</h3></a>
+        <a href="http://127.0.0.1:5050/distant_lessons/2/"><h3>Дистанційні уроки для Зварювання</h3></a>
+
+        {% for topic in topics %}
+            <li><a href="/topic/{{ topic.id }}">{{ topic.title }}</a></li>
+        {% endfor %}
+        {% for lesson in lessons %}
+            <table>
+                <tbody>
+                <tr>
+                    {{ lesson.group }}
+                    {{ lesson.subject }}
+                    <a href="http://127.0.0.1:5050/distant_lessons/{{ lesson.id }}">{{ lesson.topic }}</a>
+                </tr>
+                <tr>
+                    <th>Група</th>
+                    <th>Предмет</th>
+                    <th>Тема</th>
+                </tr>
+                </tbody>
+            </table>
+        {% endfor %}
+    </body>
+{% endblock %}
+</html>

@@ -10,7 +10,8 @@ from lessons.utils import get_lesson_file
 class DistantLearningLesson(models.Model):
     topic = models.CharField(max_length=200)
     subject = models.ForeignKey('lessons.Subject', on_delete=models.CASCADE, null=True, blank=True)
-    group = models.ForeignKey('journal.GroupStudent', on_delete=models.CASCADE)
+    #group = models.ForeignKey('journal.GroupStudent', on_delete=models.CASCADE)
+    course = models.IntegerField(choices=[(1, '1'), (2, '2')], default=1)
     main_text = models.TextField(max_length=3000)
     link = models.URLField(blank=True, null=True)
     additional_text = models.TextField(max_length=3000, blank=True, null=True)

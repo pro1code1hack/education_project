@@ -78,7 +78,7 @@ class GroupStudent(models.Model):
 class Score(models.Model):
     """Журнал оценок."""
     group = models.ForeignKey(GroupStudent, on_delete=models.CASCADE, verbose_name='Наименование класса')
-    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, verbose_name='Предмет')
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, verbose_name='Урок')
     student = models.ForeignKey(Student, related_name='score_student', on_delete=models.CASCADE, verbose_name='Студент',
                                 blank=True, null=True)
     score = models.SmallIntegerField(choices=SCORE_CHOICES, verbose_name='Оценка')
