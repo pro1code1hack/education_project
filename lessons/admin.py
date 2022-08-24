@@ -31,3 +31,5 @@ class LessonsAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Lesson, LessonsAdmin)
+admin.site.register(LessonImages)
+admin.site.register(AdditionalFiles)

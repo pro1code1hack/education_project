@@ -1,0 +1,46 @@
+{#{% extends 'base.html' %}#}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body>
+{#=========================================Lessons displaying =======================================#}
+    <h1><a href="http://127.0.0.1:5050/lessons">Всі уроки</a></h1>
+    <h1>{{ lesson.additional_text }}</h1>
+    <p>{{ lesson.main_text }}</p>
+    <p>{{ lesson.group }}</p>
+    <p>{{ lesson.main_text }}</p>
+    <hr>
+    <p>{{ lesson.topic }}</p>
+    <p>{{ lesson.subject }}</p>
+{#=========================================Lessons displaying =======================================#}
+
+{#=========================================Images Displaying =======================================#}
+{% for image in images %}
+    <p><img src="{{ image.image.url }}"></p>
+{% endfor %}
+{#=========================================Images Displaying =======================================#}
+
+{#=========================================Add Files Displaying (find html tag for it) =======================================#}
+{% for add_file in additional_files %}
+    <embed src="{{ add_file.add_file.url }}" width="800px" height="2100px"/>
+{% endfor %}
+{#=========================================Add Files Displaying (find html tag for it) =======================================#}
+
+{#=========================================Videos Displaying  =======================================#}
+{% for video in videos %}
+    <video width="320" height="240" controls>
+  <source src="{{ video.video.url }}" type="video/mp4">
+  <source src="{{ video.video.url }}" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+    <embed src="{{ add_file.video.url }}" width="800px" height="2100px"/>
+{% endfor %}
+{#=========================================Videos Displaying  =======================================#}
+</body>
+</html>

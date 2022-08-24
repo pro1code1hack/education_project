@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from journal.models import GroupStudent
+from people.models import Teacher, Student
 from .models import Quiz
 from django.views.generic import ListView
 from django.http import JsonResponse
@@ -10,9 +12,16 @@ class QuizListView(ListView):
     model = Quiz
     template_name = 'quizes/main.html'
 
-def login_action(request,pk):
+
+def login_action(request, pk):
     # login authentication
     quiz = Quiz.objects.get(pk=pk)
+    # get the group of the user
+    # x = Teacher
+    # student = Student.objects.get(user=request.user)
+    # TODO check the student
+    # x = GroupStudent.objects.get(user=request.user)
+    # print(x)
     if request.user.is_authenticated:
         return render(request, 'quizes/quiz.html', {'obj': quiz})
     # back to login page
@@ -89,9 +98,9 @@ def save_quiz_view(request, pk):
         else:
             return JsonResponse({'passed': False, 'score': score_, 'results': results})
 
+
 class Search(ListView):
     """Поиск фильмов"""
-    
 
     def get_queryset(self):
         return Quiz.objects.filter(name__icontains=self.request.GET.get("q"))

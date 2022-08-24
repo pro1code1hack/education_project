@@ -60,7 +60,7 @@ class Lesson(models.Model):
 
 # ===================================================================================================================#
 class LessonImages(models.Model):
-    lesson = models.ForeignKey(Lesson, default=None, on_delete=models.CASCADE)
+    lesson = models.ForeignKey(Lesson, default=None, on_delete=models.CASCADE, related_name='images')
     image = models.ImageField(upload_to=get_lesson_file,
                               verbose_name='Image',
                               validators=[FileExtensionValidator(allowed_extensions=['jpg', 'png'])])
@@ -69,22 +69,22 @@ class LessonImages(models.Model):
 
 # ===================================================================================================================#
 class LessonVideos(models.Model):
-    lesson = models.ForeignKey(Lesson, default=None, on_delete=models.CASCADE)
+    lesson = models.ForeignKey(Lesson, default=None, on_delete=models.CASCADE, related_name='videos')
     video = models.FileField(upload_to='videos_uploaded', null=True,
                              validators=[
                                  FileExtensionValidator(allowed_extensions=['MOV', 'avi', 'mp4', 'webm', 'mkv'])])
     date_uploaded = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return self.video
+        return self.lesson.topic.topic_name
 
 
 # ===================================================================================================================#
 
 class AdditionalFiles(models.Model):
-    lesson = models.ForeignKey(Lesson, default=None, on_delete=models.CASCADE)
-    video = models.FileField(upload_to='lesson_files_upload', null=True,
-                             validators=[
+    lesson = models.ForeignKey(Lesson, default=None, on_delete=models.CASCADE, related_name='additional_files')
+    add_file = models.FileField(upload_to='lesson_files_upload', null=True,
+                                validators=[
                                  FileExtensionValidator(allowed_extensions=['doc', 'pptx', 'xls', 'csv'])])
     date_uploaded = models.DateTimeField(default=timezone.now)
 

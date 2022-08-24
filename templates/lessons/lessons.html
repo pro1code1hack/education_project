@@ -1,0 +1,29 @@
+{#{% extends 'base.html' %}#}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body>
+<h1><a href="http://localhost:5050/lessons">Всі уроки</a></h1>
+{% for group in all_groups %}
+    <h1><a href="http://127.0.0.1:5050/lessons/{{ group.grade }}">Усі уроки для групи: {{ group.grade }}</a></h1>
+{% endfor %}
+{#=========================================Lessons displaying =======================================#}
+{% for lesson in lessons %}
+    <h1><a href="http://127.0.0.1:5050/lesson/{{ lesson.id }}">{{ lesson.id }}</a></h1>
+    <h1>{{ lesson.additional_text }}</h1>
+    <p>{{ lesson.main_text }}</p>
+    <p>{{ lesson.group }}</p>
+    <p>{{ lesson.main_text }}</p>
+    <hr>
+    <p>{{ lesson.topic }}</p>
+    <p>{{ lesson.subject }}</p>
+{% endfor %}
+{#=========================================Lessons displaying =======================================#}
+</body>
+</html>
