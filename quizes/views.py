@@ -22,12 +22,13 @@ def login_action(request, pk):
     # TODO check the student
     # x = GroupStudent.objects.get(user=request.user)
     # print(x)
+    print(request.user)
     if request.user.is_authenticated:
         return render(request, 'quizes/quiz.html', {'obj': quiz})
     # back to login page
     else:
         quiz = Quiz.objects.get(pk=pk)
-        return render(request, 'noLogin.html', {'obj': quiz})
+        return render(request, 'quizes/noLogin.html', {'obj': quiz})
 
 
 def quiz_view(request, pk):
