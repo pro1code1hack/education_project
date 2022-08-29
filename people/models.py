@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.contrib.auth.models import AbstractUser, UserManager
 from django.db import models
+from django.contrib.auth.hashers import make_password, check_password
 
 # Create your models here.
 
@@ -29,6 +30,8 @@ class Teacher(models.Model):
 
 class Student(models.Model):
     """Ученики школы."""
+    email = models.EmailField('Почта', max_length=254, unique=True, null=True, blank=True)
+    password = models.CharField('Пароль', max_length=130, default='123')
     name = models.CharField('Имя', max_length=130)
     surname = models.CharField('Фамилия', max_length=130)
     group = models.ForeignKey('journal.GroupStudent', related_name='students', verbose_name='Состоит в классе',

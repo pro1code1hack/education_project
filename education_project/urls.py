@@ -24,7 +24,6 @@ urlpatterns = [
     path('', include('lessons.urls')),
     path('', include('distant_learning.urls')),
     path('404/', render404),
-    path('quizes/', include('quizes.urls'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
