@@ -34,3 +34,6 @@ def get_lesson(request, pk=None):
                                                    'images': images, 'videos': videos,
                                                    "additional_files": additional_files,
                                                    })
+
+def main_page(request):
+    return render(request, 'main.html')
