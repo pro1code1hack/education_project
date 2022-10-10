@@ -1,75 +1,41 @@
-<!DOCTYPE html>
-<html>
-{#TODO create base.html file -- header where can I write all links#}
-<head>
-    <title>My Project</title>
-</head>
-<body>
-{% block header %}
-    <header>
-        <nav>
-            <div>
-                <ul>
-                    <li><a href="http://localhost:5050/">Головна сторінка</a></li>
-                    <li><a href="http://localhost:5050/">Домашнє Завдання (TODO)</a></li>
-                    <li><a href="http://localhost:5050/quizes/">Тестування</a></li>
-                    <li>
-                        <a href="about.asp">Уроки</a>
-                        <ul>
-                            <li><a><a href="about.asp">1 курс</a></a>
-                            </li>
-                            <li>
-                                <a><a href="about.asp">2 курс</a></a>
-                            </li>
-                        </ul>
-                    </li>
-                    {#                    <li>#}
-                    {#                        <a href="about.asp">Тестування</a>#}
-                    {#                        <ul>#}
-                    {#                            <li><a><a href="about.asp">1 курс</a></a>#}
-                    {#                            </li>#}
-                    {#                            <li>#}
-                    {#                                <a><a href="about.asp">2 курс</a></a>#}
-                    {#                            </li>#}
-                    {#                        </ul>#}
-                    {#                    </li>#}
-                    <li><a href="about.asp">Методична робота</a></li>
-                    <!-- Dropdown -->
+<div
+  id="mob-menu"
+  class="border-b p-4 flex justify-between items-center md:hidden"
+>
+  <h2 class="font-bold text-[14px]">Методична робота</h2>
+  <div class="h-8 w-8 bg-[yellow]"></div>
+</div>
 
-                    <li>
-                        <a href="about.asp">Дистанційне навчання</a>
-                        <ul>
-                            <li><a><a href="about.asp">1 курс</a></a>
-                            </li>
-                            <li>
-                                <a><a href="about.asp">2 курс</a></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- Dropdown -->
-                    <li>
-                        <a href="about.asp">Виробниче навчання</a>
-                        <ul>
-                            <li><a><a href="about.asp">1 курс</a></a>
-                            </li>
-                            <li>
-                                <a><a href="about.asp">2 курс</a></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- Dropdown -->
-                    <li><a href="contact.asp">Навчально-практичний центр</a></li>
-                    <li><a href="about.asp">Вхід</a></li>
-                </ul>
-
-            </div>
-        </nav>
-
-    </header>
-{% endblock %}
-
-{% block content %}
-{% endblock %}
-
-</body>
-</html>
+<div
+  id="desktop-menu"
+  class="h-screen border-r hidden min-w-[22%] p-4 md:block"
+>
+  <div class="flex p-4">
+    <div class="h-5 w-5 bg-[yellow] mr-4"></div>
+    <h2 class="font-bold text-[14px]">Головна</h2>
+  </div>
+  <div class="flex p-4">
+    <div class="h-5 w-5 bg-[yellow] mr-4"></div>
+    <h2 class="font-bold text-[14px]">Домашня робота</h2>
+  </div>
+  <div class="flex p-4">
+    <div class="h-5 w-5 bg-[yellow] mr-4"></div>
+    <h2 class="font-bold text-[14px]">Підручники</h2>
+  </div>
+  <div class="flex p-4">
+    <div class="h-5 w-5 bg-[yellow] mr-4"></div>
+    <h2 class="font-bold text-[14px]">Методична робота</h2>
+  </div>
+  <div class="flex p-4">
+    <div class="h-5 w-5 bg-[yellow] mr-4"></div>
+    <h2 class="font-bold text-[14px]">Дистанційне навчання</h2>
+  </div>
+  <div class="flex p-4">
+    <div class="h-5 w-5 bg-[yellow] mr-4"></div>
+    <h2 class="font-bold text-[14px]">Виробниче навчання</h2>
+  </div>
+  <div class="flex p-4">
+    <div class="h-5 w-5 bg-[yellow] mr-4"></div>
+    <h2 class="font-bold text-[14px]">Практичний центр</h2>
+  </div>
+</div>

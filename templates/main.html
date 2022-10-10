@@ -1,311 +1,509 @@
-{% extends 'base.html' %}
+<head>
+  <title>Education SAAS</title>
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+  <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    /> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="w-full md:flex">
+    <div
+      id="mob-menu"
+      class="border-b p-4 flex justify-between items-center md:hidden"
+    >
+      <h2 class="font-bold text-[14px]">Головна</h2>
+      <div class="h-8 w-8 bg-[yellow]"></div>
+    </div>
 
-<div class="dark:bg-gray-900">
-  <div class="container min-h-[90vh] px-8 mx-auto xl:px-0 flex md:flex-row flex-col">
-    <div class="flex items-center w-full lg:w-1/2">
-      <div class="max-w-2xl mb-8 mt-10 lg:mt-0">
-        <h1
-          class="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
-          Hi, i am the teacher. Lorem lorem
-        </h1>
-        <p class="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">Lorem ipsum
-          dolor sit amet consectetur, adipisicing elit. Ex dignissimos cupiditate, autem quod dolor voluptatem sint
-          est consequatur!Lorem ipsum
-          dolor sit amet consectetur, adipisicing elit. Ex dignissimos cupiditate, autem quod dolor voluptatem sint
-          est consequatur! Lorem ipsum
-          dolor sit amet consectetur, adipisicing elit. Ex dignissimos cupiditate, autem quod dolor voluptatem sint
-          est</p>
-        <div class="flex space-x-4 items-center sm:flex-row">
-          <a href="/" target="_blank" rel="noopener"
-            class="px-3 sm:px-8 sm:py-4 py-2 text-md sm:text-lg font-medium text-center text-white bg-indigo-600 rounded-md ">Get started</a>
-          <a href="/" target="_blank" rel="noopener"
-            class="sm:px-8 px-3 sm:py-4 py-2 text-md sm:text-lg font-medium text-center text-gray-500 dark:text-white border-2 rounded-md hover:text-gray-900 hover:border-gray-900 duration-300 ease-in-out dark:hover:text-indigo-500 dark:hover:border-indigo-500">Contact
-            us</a>
-        </div>
+    <div
+      id="desktop-menu"
+      class="h-screen border-r hidden min-w-[22%] p-4 md:block sticky top-0"
+    >
+      <div class="flex p-4">
+        <div class="h-5 w-5 bg-[yellow] mr-4"></div>
+        <h2 class="font-bold text-[14px]">Головна</h2>
+      </div>
+      <div class="flex p-4">
+        <div class="h-5 w-5 bg-[yellow] mr-4"></div>
+        <h2 class="font-bold text-[14px]">Домашня робота</h2>
+      </div>
+      <div class="flex p-4">
+        <div class="h-5 w-5 bg-[yellow] mr-4"></div>
+        <h2 class="font-bold text-[14px]">Підручники</h2>
+      </div>
+      <div class="flex p-4">
+        <div class="h-5 w-5 bg-[yellow] mr-4"></div>
+        <h2 class="font-bold text-[14px]">Методична робота</h2>
+      </div>
+      <div class="flex p-4">
+        <div class="h-5 w-5 bg-[yellow] mr-4"></div>
+        <h2 class="font-bold text-[14px]">Дистанційне навчання</h2>
+      </div>
+      <div class="flex p-4">
+        <div class="h-5 w-5 bg-[yellow] mr-4"></div>
+        <h2 class="font-bold text-[14px]">Виробниче навчання</h2>
+      </div>
+      <div class="flex p-4">
+        <div class="h-5 w-5 bg-[yellow] mr-4"></div>
+        <h2 class="font-bold text-[14px]">Практичний центр</h2>
       </div>
     </div>
-    <div class="flex items-center justify-center w-full lg:w-1/2">
-      <div class="">
+    <div>
+      <div class="px-4 pt-4 lg:px-8">
         <div
-          style="display:inline-block;max-width:100%;overflow:hidden;position:relative;box-sizing:border-box;margin:0">
-          <div style="box-sizing:border-box;display:block;max-width:100%">
-            <img style="max-width:100%;display:block;margin:0;border:none;padding:0" alt="" aria-hidden="true"
-              src="image/papa.png">
+          class="bg-gray-100 flex flex-col rounded-lg px-5 lg:flex-row-reverse lg:px-10"
+        >
+          <div
+            class="bg-red-600 w-56 h-64 mt-4 flex self-center lg:min-w-[343px] lg:h-[399px]"
+          ></div>
+
+          <div>
+            <h2
+              class="text-[26px] font-extrabold leading-[34px] mt-4 max-w-[200px] lg:text-[37px] lg:leading-[51px] lg:mt-[70px]"
+            >
+              Дремлюга
+              <h2
+                class="text-[26px] font-extrabold leading-[34px] max-w-[200px] lg:text-[37px] lg:leading-[51px] lg:max-w-none"
+              >
+                Сергій Олександрович
+              </h2>
+            </h2>
+            <p class="text-[16px] font-[400] leading-[24px] mt-4">
+              Інженер-механік. Викладач спеціальних дисциплін. Майстер
+              виробничого навчання. Спеціаліст вищої категорії,
+              викладач-методист.
+            </p>
+            <div class="w-full mt-6 mb-5 lg:mt-10">
+              <button
+                class="flex justify-center items-center h-12 w-full bg-[#3A528C] rounded text-[#ffffff] text-[16px] font-[700] lg:w-[263px]"
+              >
+                Отримати Консультацію
+              </button>
+            </div>
           </div>
-          <img alt="Main photo" src="image/papa.png" decoding="async" data-nimg="true"
-            style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: medium none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; filter: none; background-size: cover; background-image: none; background-position: 0% 0%;">
         </div>
       </div>
-    </div>
-  </div>
-  <div class="container p-8 py-8  mx-auto xl:px-0 flex flex-wrap mb-20 lg:gap-10 flex-col-reverse lg:flex-row lg:flex-nowrap ">
-    <div class="flex items-center justify-center w-full lg:w-1/2 lg:mt-0 mt-8">
-      <div>
+
+      <div class="px-4 mt-[60px] lg:px-8 lg:mt-[44px]">
+        <div class="lg:flex lg:items-center lg:mb-5">
+          <h4
+            class="text-[#191715] text-[14px] font-[600] leading-[20px] lg:w-[190px]"
+          >
+            ОСВІТА:
+          </h4>
+          <p
+            class="text-[#191715] text-[16px] font-[400] leading-[24px] mt-2 mb-6 lg:mt-0 lg:mb-0"
+          >
+            Вища Вінницький Політехнічний Інститут
+          </p>
+        </div>
+        <div class="lg:flex lg:items-center lg:mb-5">
+          <h4
+            class="text-[#191715] text-[14px] font-[600] leading-[20px] lg:w-[190px]"
+          >
+            СПЕЦІАЛЬНІСТЬ:
+          </h4>
+          <p
+            class="text-[#191715] text-[16px] font-[400] leading-[24px] mt-2 mb-6 lg:mt-0 lg:mb-0"
+          >
+            Інженер-механік
+          </p>
+        </div>
+        <div class="lg:flex lg:items-center lg:mb-5">
+          <h4
+            class="text-[#191715] text-[14px] font-[600] leading-[20px] lg:w-[190px]"
+          >
+            СТАЖ ПЕДАГОГІЧНОЇ РОБОТИ:
+          </h4>
+          <p
+            class="text-[#191715] text-[16px] font-[400] leading-[24px] mt-2 mb-6 lg:mt-0 lg:mb-0 lg:self-start"
+          >
+            17 років
+          </p>
+        </div>
+        <div class="lg:flex lg:items-center lg:mb-5">
+          <h4
+            class="text-[#191715] text-[14px] font-[600] leading-[20px] lg:w-[190px]"
+          >
+            МІСЦЕ РОБОТИ:
+          </h4>
+          <p
+            class="text-[#191715] text-[16px] font-[400] leading-[24px] mt-2 mb-6 lg:mt-0 lg:mb-0"
+          >
+            Вище художнє професійно-технічне училище №5 м.Вінниці
+          </p>
+        </div>
+        <div class="lg:flex lg:items-center lg:mb-5">
+          <h4
+            class="text-[#191715] text-[14px] font-[600] leading-[20px] lg:min-w-[190px] lg:self-start"
+          >
+            ПОСАДА:
+          </h4>
+          <p
+            class="text-[#191715] text-[16px] font-[400] leading-[24px] mt-2 mb-6 lg:mt-0 lg:mb-0"
+          >
+            Викладач спеціальних дисциплін. Керівник навчально-практичного
+            центру підготовки робітників з професії «Монтажник
+            санітарно-технічних систем і устаткування». Голова методичної
+            комісії мулярів, монтажників санітарно-технічних систем і
+            устаткування, електрогазозварників, виробників художніх виробів з
+            металу. Майстер виробничого навчання. Спеціаліст вищої категорії,
+            викладач-методист.
+          </p>
+        </div>
+      </div>
+
+      <div class="px-4 lg:px-8">
         <div
-          style="display:inline-block;max-width:100%;overflow:hidden;position:relative;box-sizing:border-box;margin:0">
-          <div style="box-sizing:border-box;display:block;max-width:100%">
-            <img style="max-width:100%;display:block;margin:0;border:none;padding:0" alt="vhptu5" aria-hidden="true"
-              src="image/logo-mini.jpg">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="flex flex-wrap items-center w-full lg:w-1/2 ">
-      <div>
-        <div class="flex flex-col w-full">
+          class="bg-[#DFECE0] px-5 py-8 mt-[60px] mb-5 rounded-lg lg:h-[268px] lg:p-[40px]"
+        >
+          <div
+            class="bg-red-600 w-6 h-6 mb-4 lg:w-[40px] lg:h-[40px] lg:mb-5"
+          ></div>
           <h3
-            class="max-w-2xl text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-            Про мене
+            class="text-[#191715] text-[22px] font-[700] leading-[30px] mb-4 lg:text-[32px] lg:leading-[36px] lg:mb-5"
+          >
+            Дистанційне навчання
           </h3>
-          <p class="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad accusantium reiciendis animi commodi labore
-            enim illum provident ullam!</p>
+          <p class="text-[#191715] text-[16px] font-[400] leading-[24px]">
+            Тут учні знайдуть конспекти уроків, презентації, які допоможуть
+            закріпити знання з професій монтажник санітарно-технічних систем та
+            устаткування, електрогазозварник. Також підготуватись до тестових
+            завдань, які будуть після кожного уроку.
+          </p>
         </div>
-        <div class="w-full mt-5">
-          <div class="flex items-start mt-8 space-x-3">
-            <div class="flex items-center justify-center flex-shrink-0 mt-1 bg-indigo-500 rounded-md w-11 h-11 ">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                class="w-7 h-7 text-indigo-50">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
-                </path>
-              </svg>
-            </div>
-            <div>
-              <h4 class="text-xl font-medium text-gray-800 dark:text-gray-200">Освіта</h4>
-              <p class="mt-1 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit</p>
-            </div>
+
+        <div class="lg:flex lg:flex-row-reverse lg:mb-10 lg:gap-[20px]">
+          <div
+            class="bg-[#DFECE0] px-5 py-8 mb-5 rounded-lg lg:max-h-[426px] lg:mr-[24px] lg:w-[50%] lg:p-[40px]"
+          >
+            <div class="bg-red-600 w-6 h-6 mb-4 lg:w-[40px] lg:h-[40px]"></div>
+            <h3
+              class="text-[#191715] text-[22px] font-[700] leading-[30px] mb-4 lg:text-[32px] lg:leading-[36px] lg:mb-5"
+            >
+              Виробниче навчання
+            </h3>
+            <p class="text-[#191715] text-[16px] font-[400] leading-[24px]">
+              Ви знайдете тут плани уроків виробничого навчання, інструкційні
+              карти по професіях презентації до уроків, відео ролики.
+            </p>
           </div>
-          <div class="flex items-start mt-8 space-x-3">
-            <div class="flex items-center justify-center flex-shrink-0 mt-1 bg-indigo-500 rounded-md w-11 h-11 ">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                class="w-7 h-7 text-indigo-50">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
-                </path>
-              </svg>
-            </div>
-            <div>
-              <h4 class="text-xl font-medium text-gray-800 dark:text-gray-200">Cпеціальність</h4>
-              <p class="mt-1 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit</p>
-            </div>
+
+          <div
+            class="px-5 py-8 mb-10 border-solid border-[#B9BEC7] border-[1px] rounded-lg lg:max-h-[426px] lg:mb-5 lg:w-[50%] lg:p-[40px]"
+          >
+            <div
+              class="bg-red-600 w-6 h-6 mb-4 lg:w-[40px] lg:h-[40px] lg:mb-5"
+            ></div>
+            <h3
+              class="text-[#191715] text-[22px] font-[700] leading-[30px] mb-4 lg:text-[32px] lg:leading-[36px] lg:mb-5"
+            >
+              Для вчителів
+            </h3>
+            <p class="text-[#191715] text-[16px] font-[400] leading-[24px]">
+              Плани уроків по професіях монтажник санітарно-технічних систем і
+              устаткування, електрогазозварник, презентації до уроків, відео
+              ролики. Все це Ви знайдете тут.
+            </p>
           </div>
-          <div class="flex items-start mt-8 space-x-3">
-            <div class="flex items-center justify-center flex-shrink-0 mt-1 bg-indigo-500 rounded-md w-11 h-11 ">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                class="w-7 h-7 text-indigo-50">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
-                </path>
-              </svg>
+        </div>
+        <div class="lg:flex lg:justify-end">
+          <div
+            class="bg-[#E2EDF9] px-5 py-8 rounded-lg relative lg:w-[79%] lg:p-[40px]"
+          >
+            <div
+              class="bg-red-600 w-[120px] h-[52px] absolute rotate-[-132deg] left-[68px] top-[-44px]"
+            ></div>
+
+            <div class="lg:flex">
+              <div
+                class="bg-red-600 w-6 h-6 mb-4 lg:w-[40px] lg:h-[40px] lg:mb-5 lg:mr-5"
+              ></div>
+              <h3
+                class="text-[#191715] text-[22px] font-[700] leading-[30px] mb-4 lg:text-[32px] lg:leading-[36px] lg:mb-5"
+              >
+                Методична робота
+              </h3>
             </div>
-            <div>
-              <h4 class="text-xl font-medium text-gray-800 dark:text-gray-200">Стаж роботи</h4>
-              <p class="mt-1 text-gray-500 dark:text-gray-400">17 років.</p>
-            </div>
-          </div>
-          <div class="flex items-start mt-8 space-x-3">
-            <div class="flex items-center justify-center flex-shrink-0 mt-1 bg-indigo-500 rounded-md w-11 h-11 ">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                class="w-7 h-7 text-indigo-50">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
-                </path>
-              </svg>
-            </div>
-            <div>
-              <h4 class="text-xl font-medium text-gray-800 dark:text-gray-200">Місце роботи</h4>
-              <p class="mt-1 text-gray-500 dark:text-gray-400">Вище художнє професійно-технічне училище № 5</p>
-            </div>
-          </div>
-          <div class="flex items-start mt-8 space-x-3">
-            <div class="flex items-center justify-center flex-shrink-0 mt-1 bg-indigo-500 rounded-md w-11 h-11 ">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                class="w-7 h-7 text-indigo-50">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
-                </path>
-              </svg>
-            </div>
-            <div>
-              <h4 class="text-xl font-medium text-gray-800 dark:text-gray-200">Посада</h4>
-              <p class="mt-1 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Voluptatem mollitia beatae laudant</p>
-            </div>
+            <p class="text-[#191715] text-[16px] font-[400] leading-[24px]">
+              Методичні розробки уроків теоретичного та виробничого навчання по
+              професіях монтажник санітарно-технічних систем та устаткування,
+              електрогазозварник, проведення декади монтажників
+              санітарно-технічних систем і устаткування, мулярів,
+              електрогазозварників, виробників художніх виробів з металу.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <section class="bg-white dark:bg-gray-900 pt-20 relative pb-14">
-    <svg class="absolute -left-8" width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g opacity="0.3">
-        <path d="M96.9136 36.5354L110.571 36.3167L109.988 -0.000432262L73.6711 0.581055L73.8887 14.1353L96.5481 13.7725L96.9136 36.5354Z" fill="#576780"></path>
-        <path d="M72.7847 61.4494L86.339 61.2324L85.7559 24.9153L49.5422 25.4951L49.7615 39.1528L72.4209 38.79L72.7847 61.4494Z" fill="#576780"></path>
-        <path d="M48.5526 86.3665L62.2104 86.1478L61.6289 49.9341L25.3118 50.5156L25.5294 64.0699L48.1888 63.7071L48.5526 86.3665Z" fill="#576780"></path>
-        <path d="M24.4254 111.385L38.0832 111.167L37.5001 74.8497L1.18292 75.4312L1.40221 89.0889L24.0616 88.7261L24.4254 111.385Z" fill="#576780"></path>
-      </g>
-    </svg>
-    <div class="mx-auto text-gray-800 font-extrabold text-3xl sm:text-5xl w-fit relative">
-      <h1 class="relative z-20 dark:text-white">Navigation</h1><svg class="absolute right-0 sm:-right-16 top-9 z-10 opacity-30" width="90" height="39" viewBox="0 0 90 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M67.0128 35.3452C75.976 35.3452 83.2775 28.1547 83.2775 19.3277C83.2775 10.5007 75.976 3.31012 67.0128 3.31012L67.0128 35.3452Z" fill="#576780"></path>
-        <path d="M41.6388 35.3452C50.602 35.3452 57.9035 28.1547 57.9035 19.3277C57.9035 10.5007 50.602 3.31012 41.6388 3.31012L41.6388 35.3452Z" fill="#576780"></path>
-        <path d="M16.2648 35.3452C25.228 35.3452 32.5295 28.1547 32.5295 19.3277C32.5295 10.5007 25.228 3.31012 16.2648 3.31012L16.2648 35.3452Z" fill="#576780"></path>
-      </svg>
-    </div>
-    <div class="mt-[60px] flex items-center max-w-7xl w-full mx-auto flex-wrap justify-center xl:justify-between">
-      <div class="w-[416px] sm:h-72 px-7 py-11 text-center"><span class="text-indigo-500 text-3xl font-semibold">1</span>
-        <div class="mt-2">
-          <h2 class="text-gray-800 dark:text-white text-xl font-semibold max-w-[300px] mx-auto mb-3 ">
-            Підручники</h2>
-          <p class="text-gray-500 max-w-xs mx-auto dark:text-gray-400">В цьому розділі Ви знайдете підручники, які стануть Вам у нагоді до підготовки до уроків.</p>
-        </div>
-      </div>
-      <div class="w-[416px] sm:h-72 px-7 py-11 text-center"><span class="text-indigo-500 text-3xl font-semibold">2</span>
-        <div class="mt-2">
-          <h2 class="text-gray-800 dark:text-white text-xl font-semibold max-w-[300px] mx-auto mb-3 ">
-            Домашнє завдання</h2>
-          <p class="text-gray-500 max-w-xs mx-auto dark:text-gray-400">Якщо Ви забули записати домашнє завдання після уроку то це не біда. Тут Ви знайдете всю інформацію яку потрібно Вам знати.</p>
-        </div>
-      </div>
-      <div class="w-[416px] sm:h-72 px-7 py-11 text-center"><span class="text-indigo-500 text-3xl font-semibold">3</span>
-        <div class="mt-2">
-          <h2 class="text-gray-800 dark:text-white text-xl font-semibold max-w-[300px] mx-auto mb-3 ">
-            Тестування</h2>
-          <p class="text-gray-500 max-w-xs mx-auto dark:text-gray-400">Тестові завдання на різний смак. Щоб закріпити знання по тій чи іншій темі, потрібно обов’язково пройти тест.</p>
-        </div>
-      </div>
-      <div class="w-[416px] sm:h-72 px-7 py-11 text-center"><span class="text-indigo-500 text-3xl font-semibold">4</span>
-        <div class="mt-2">
-          <h2 class="text-gray-800 dark:text-white text-xl font-semibold max-w-[300px] mx-auto mb-3 ">
-            Методична робота</h2>
-          <p class="text-gray-500 max-w-xs mx-auto dark:text-gray-400">Методичні розробки уроків теоретичного та виробничого навчання по професіях монтажник санітарно-технічних систем та
-              устаткування, електрогазозварник</p>
-        </div>
-      </div>
-      <div class="w-[416px] sm:h-72 px-7 py-11 text-center"><span class="text-indigo-500 text-3xl font-semibold">5</span>
-        <div class="mt-2">
-          <h2 class="text-gray-800 dark:text-white text-xl font-semibold max-w-[300px] mx-auto mb-3 ">
-          Дистанційне навчання</h2>
-          <p class="text-gray-500 max-w-xs mx-auto dark:text-gray-400">Тут учні знайдуть конспекти уроків, презентації, які допоможуть закріпити знання з професій монтажник
-              санітарно-технічних систем та устаткування, електрогазозварник.</p>
-        </div>
-      </div>
-      <div class="w-[416px] sm:h-72 px-7 py-11 text-center"><span class="text-indigo-500 text-3xl font-semibold">6</span>
-        <div class="mt-2">
-          <h2 class="text-gray-800 dark:text-white text-xl font-semibold max-w-[300px] mx-auto mb-3 ">
-          Виробниче навчання</h2>
-          <p class="text-gray-500 max-w-xs mx-auto dark:text-gray-400">Ви знайдете тут плани уроків виробничого навчання, інструкційні карти по професіях монтажник санітарно-технічних
-              систем і устаткування, електрогазозварник, презентації до уроків, відео ролики.</p>
-        </div>
-      </div>
-      <div class="w-[416px] sm:h-72 px-7 py-11 text-center"><span class="text-indigo-500 text-3xl font-semibold">7</span>
-        <div class="mt-2">
-          <h2 class="text-gray-800 dark:text-white text-xl font-semibold max-w-[300px] mx-auto mb-3 ">
-          Навчально-практичний центр</h2>
-          <p class="text-gray-500 max-w-xs mx-auto dark:text-gray-400">Центр створено для навчання учнів ВХПТУ №5 м. Вінниці та слухачів Центру зайнятості. Навчання базується на основних принципах модульної системи.</p>
-        </div>
-      </div>
-      <div class="w-[416px] sm:h-72 px-7 py-11 text-center"><span class="text-indigo-500 text-3xl font-semibold">8</span>
-        <div class="mt-2">
-          <h2 class="text-gray-800 dark:text-white text-xl font-semibold max-w-[300px] mx-auto mb-3 ">
-          Github</h2>
-          <p class="text-gray-500 max-w-xs mx-auto dark:text-gray-400">В цьому розділі ви знайдете портфоліо розробника.Основна мова програмування Python-досвідчений.HTML/CSS/JS -середній. С++/Java-початківець.</p>
-        </div>
-      </div>
-      <div class="w-[416px] sm:h-72 px-7 py-11 text-center"><span class="text-indigo-500 text-3xl font-semibold">9</span>
-        <div class="mt-2">
-          <h2 class="text-gray-800 dark:text-white text-xl font-semibold max-w-[300px] mx-auto mb-3 ">
-          Мої напрацювання за 2017-2021 рік</h2>
-          <p class="text-gray-500 max-w-xs mx-auto dark:text-gray-400">Мої напрацювання за 2017-2019 рік. Для додаткових матеріалів, переходьте за посиланням, частина матеріалів що була використана в мої роботі знаходиться саме тут.</p>
-        </div>
-      </div>
-    </div><svg class="absolute right-0 bottom-0 z-10" width="103" height="100" viewBox="0 0 103 100" fill="#576780" xmlns="http://www.w3.org/2000/svg">
-      <g opacity="0.2" clip-path="url(#clip0_561_1360)">
-        <path d="M97.5669 0C43.6308 0 0 43.6308 0 97.5669C0 151.369 43.6308 195.134 97.5669 195.134C151.369 195.134 195.134 151.503 195.134 97.5669C195 43.6308 151.369 0 97.5669 0ZM97.5669 188.844C47.1105 188.844 6.29032 148.023 6.29032 97.5669C6.29032 47.1105 47.1105 6.29032 97.5669 6.29032C148.023 6.29032 188.844 47.1105 188.844 97.5669C188.844 147.89 147.89 188.844 97.5669 188.844Z" fill="#576780"></path>
-        <path d="M97.5677 21.0125C55.4092 21.0125 21.147 55.2746 21.147 97.4332C21.147 139.592 55.4092 173.854 97.5677 173.854C139.726 173.854 173.988 139.726 173.988 97.567C173.988 55.2746 139.726 21.0125 97.5677 21.0125ZM97.5677 162.21C61.8333 162.21 32.7908 133.168 32.7908 97.4332C32.7908 61.6988 61.8333 32.6562 97.5677 32.6562C133.302 32.6562 162.345 61.6988 162.345 97.4332C162.345 133.168 133.302 162.21 97.5677 162.21Z" fill="#576780"></path>
-      </g>
-      <defs>
-        <clipPath id="clip0_561_1360">
-          <rect width="195" height="195" fill="white"></rect>
-        </clipPath>
-      </defs>
-    </svg>
-  </section>
-  <div class="container py-8  p-8 mx-auto xl:px-0 flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap mt-14">
-    <div class="flex items-center justify-center w-full lg:w-1/2 lg:order-1">
-      <div>
+
+      <div
+        class="flex flex-col items-center lg:flex-row lg:mt-[120px] lg:justify-between lg:px-8"
+      >
         <div
-          style="display:inline-block;max-width:100%;overflow:hidden;position:relative;box-sizing:border-box;margin:0">
-          <div style="box-sizing:border-box;display:block;max-width:100%">
-            <img style="max-width:100%;display:block;margin:0;border:none;padding:0" alt="" aria-hidden="true"
-              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIxIiBoZWlnaHQ9IjQ4MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4=">
-          </div>
-          <img alt="Some iamge" src="image/undraw_online_test_re_kyfx.svg" decoding="async" data-nimg="true"
-            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;;background-size:cover;">
+          class="w-[213px] mb-5 mt-[60px] flex flex-col items-center lg:mt-0"
+        >
+          <h1 class="text-[52px] font-[800] leader-[36px] text-[#191715]">
+            1894
+          </h1>
+          <div class="bg-[#3A528C] w-[146px] h-[23px] mb-[20px]"></div>
+          <p class="text-[16px] font-[400] leader-[24px] text-[#191715]">
+            Успішних випускників
+          </p>
+        </div>
+        <div class="w-[213px] mb-5 flex flex-col items-center">
+          <h1 class="text-[52px] font-[800] leader-[36px] text-[#191715]">
+            17
+          </h1>
+          <div class="bg-[#3A528C] w-[146px] h-[23px] mb-[20px]"></div>
+          <p class="text-[16px] font-[400] leader-[24px] text-[#191715]">
+            Стаж роботи
+          </p>
+        </div>
+        <div class="w-[213px] mb-5 flex flex-col items-center">
+          <h1 class="text-[52px] font-[800] leader-[36px] text-[#191715]">
+            85
+          </h1>
+          <div class="bg-[#3A528C] w-[146px] h-[23px] mb-[20px]"></div>
+          <p class="text-[16px] font-[400] leader-[24px] text-[#191715]">
+            Кількість грамот
+          </p>
+        </div>
+        <div class="w-[213px] mb-5 flex flex-col items-center">
+          <h1 class="text-[52px] font-[800] leader-[36px] text-[#191715]">
+            410
+          </h1>
+          <div class="bg-[#3A528C] w-[146px] h-[23px] mb-[20px]"></div>
+          <p class="text-[16px] font-[400] leader-[24px] text-[#191715]">
+            Кількість презентацій
+          </p>
         </div>
       </div>
-    </div>
-    <div class="flex flex-wrap items-center w-full lg:w-1/2 lg:justify-end">
-      <div>
-        <div class="flex flex-col w-full">
-          <h3
-            class="max-w-2xl text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-            Lorem loerm lorem</h3>
-          <p class="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, iusto pariatur dolor eum illo, voluptatem
-            commodi hic placeat perspiciatis beatae veritatis? Rem quas voluptatum quae veritatis distinctio saepe
-            molestiae? Soluta.</p>
+
+      <div class="flex items-center pl-[16px] mt-[60px] lg:pl-[32px]">
+        <div
+          class="bg-red-600 w-[60px] h-[60px] mr-[20px] lg:w-[130px] lg:h-[130px] lg:mr-[40px]"
+        ></div>
+        <h3
+          class="text-[#191715] text-[22px] font-[700] leading-[30px] lg:text-[32px] lg:leading-[36px]"
+        >
+          Для учнів
+        </h3>
+      </div>
+
+      <div class="px-4 lg:px-8">
+        <div class="lg:flex lg:flex-col lg:items-end">
+          <div
+            class="bg-[#DFECE0] px-5 py-8 mt-[20px] mb-5 rounded-lg lg:w-[79%]"
+          >
+            <div class="flex items-center">
+              <div class="bg-red-600 w-6 h-6 mb-4 mr-2"></div>
+              <h3
+                class="text-[#191715] text-[22px] font-[700] leading-[30px] mb-4"
+              >
+                Домашня робота
+              </h3>
+            </div>
+            <p class="text-[#191715] text-[16px] font-[400] leading-[24px]">
+              Якщо Ви забули записати домашнє завдання після уроку то це не
+              біда. Тут Ви знайдете всю інформацію яку потрібно Вам знати.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#DFECE0] px-5 py-8 mt-[20px] mb-5 rounded-lg lg:w-[79%]"
+          >
+            <div class="flex items-center">
+              <div class="bg-red-600 w-6 h-6 mb-4 mr-2"></div>
+              <h3
+                class="text-[#191715] text-[22px] font-[700] leading-[30px] mb-4"
+              >
+                Тестування
+              </h3>
+            </div>
+            <p class="text-[#191715] text-[16px] font-[400] leading-[24px]">
+              Тестові завдання на різний смак. Щоб закріпити знання по тій чи
+              іншій темі, потрібно обов’язково пройти тест. Оцінку, яку ви
+              отримаєте, буде перенесено в журнал теоретичного навчання. Вчителі
+              можуть скористатися цим тестами для опитування на своїх уроках.
+            </p>
+          </div>
+
+          <div class="bg-[#DFECE0] px-5 py-8 mt-[20px] rounded-lg lg:w-[79%]">
+            <div class="flex items-center">
+              <div class="bg-red-600 w-6 h-6 mb-4 mr-2"></div>
+              <h3
+                class="text-[#191715] text-[22px] font-[700] leading-[30px] mb-4"
+              >
+                Підручники
+              </h3>
+            </div>
+            <p class="text-[#191715] text-[16px] font-[400] leading-[24px]">
+              В цьому розділі Ви знайдете підручники, які стануть Вам у нагоді
+              до підготовки до уроків.
+            </p>
+          </div>
         </div>
-        <div class="w-full mt-5">
-          <div class="flex items-start mt-8 space-x-3">
-            <div class="flex items-center justify-center flex-shrink-0 mt-1 bg-indigo-500 rounded-md w-11 h-11 ">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                class="w-7 h-7 text-indigo-50">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
-                </path>
-              </svg>
+      </div>
+
+      <div class="px-4 lg:px-8">
+        <div class="bg-red-600 w-[66px] h-[57px] mt-[60px] mb-2"></div>
+        <div>
+          <p class="text-[#46464E] text-[16px] font-[400] leading-[24px] mb-6">
+            Я Вам вдячний за те, що Ви потрапили на цей сайт. Сподіваюсь, що
+            інформація, яка тут розміщена буде цікавою для викладачів
+            спеціальних дисциплін з професій «монтаж санітарно-технічних систем
+            і устаткування», «електрогазозварник», а також для тих, хто працює у
+            сфері професійно-технічної освіти. До вашої уваги я представляю свої
+            методичні напрацювання.
+          </p>
+
+          <p class="text-[#46464E] text-[16px] font-[400] leading-[24px] mb-6">
+            Однак, більше моя робота спрямована на впровадження елементів
+            дистанційного навчання при вивченні відповідних предметів
+            професійно-теоретичної підготовки учнями. Тому хочу звернутися до
+            майбутніх сантехників та зварників: тепер не кажіть, що не вивчив,
+            бо хворів, проспав чи так забув;) Все, що я тут розміщую має
+            забезпечити неперервність навчально-виховного процесу й сприятиме
+            формуванню мобільного, креативного кваліфікованого робітника.
+            «Вчіться – не лініться».
+          </p>
+
+          <p class="text-[#46464E] text-[16px] font-[700] leading-[24px]">
+            З повагою – Дремлюга Сергій Олександрович – викладач вищої
+            категорій, «викладач-методист» Вищого художнього професійно
+            технічного училища № 5 м. Вінниці.
+          </p>
+        </div>
+        <div class="flex justify-end">
+          <div class="bg-red-600 w-[66px] h-[57px]"></div>
+        </div>
+      </div>
+
+      <div class="px-4 lg:px-8">
+        <div class="lg:flex lg:gap-[20px] lg:mt-[60px]">
+          <div
+            class="bg-[#E2EDF9] px-5 py-8 mb-5 rounded-lg flex flex-col items-center lg:justify-end mt-[60px] lg:w-[50%] lg:min-h-[537px] lg:mt-0 lg:px-10 lg:py-10"
+          >
+            <div
+              class="bg-red-600 w-[100px] h-[100px] mb-[60px] lg:w-[130px] lg:h-[130px] lg:mb-[80px]"
+            ></div>
+            <h3
+              class="text-[#191715] text-[22px] font-[700] leading-[30px] mb-5 lg:text-[32px] lg:leading-[36px]"
+            >
+              Навчально-практичний центр
+            </h3>
+            <p class="text-[#191715] text-[16px] font-[400] leading-[24px]">
+              Центр створено для навчання учнів ВХПТУ №5 м. Вінниці та слухачів
+              Центру зайнятості. Навчання базується на основних принципах
+              модульної системи.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#E2EDF9] px-5 py-8 mb-5 rounded-lg flex flex-col items-center lg:justify-end lg:w-[50%] lg:min-h-[537px] lg:px-10 lg:py-10"
+          >
+            <div
+              class="bg-red-600 w-[100px] h-[100px] mb-[60px] lg:w-[130px] lg:h-[130px] lg:mb-[80px]"
+            ></div>
+            <h3
+              class="text-[#191715] text-[22px] font-[700] leading-[30px] mb-5 lg:text-[32px] lg:leading-[36px]"
+            >
+              Мої напрацювання за 2017-2021 рік
+            </h3>
+            <p class="text-[#191715] text-[16px] font-[400] leading-[24px]">
+              Мої напрацювання за 2017-2021 рік. Для додаткових матеріалів,
+              переходьте за посиланням, частина матеріалів що була використана в
+              мої роботі знаходиться тут.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-yellow-100 px-5 py-8 mt-[20px] rounded-lg lg:mt-0 lg:px-10 lg:py-10"
+        >
+          <div class="flex items-center">
+            <div
+              class="bg-red-600 w-6 h-6 mb-4 mr-2 lg:w-10 lg:h-10 lg:mr-4 lg:mb-5"
+            ></div>
+            <h3
+              class="text-[#191715] text-[22px] font-[700] leading-[30px] mb-4 lg:text-[32px] lg:leading-[36px]"
+            >
+              Github
+            </h3>
+          </div>
+          <p class="text-[#191715] text-[16px] font-[400] leading-[24px]">
+            В цьому розділі ви знайдете портфоліо розробника. Основна мова
+            програмування Python-досвідчений. HTML/CSS/JS -середній.
+            С++/Java-початківець.
+          </p>
+        </div>
+      </div>
+
+      <div class="px-4 mt-[60px] lg:px-8">
+        <h2
+          class="text-[#191715] text-[16px] font-[700] leading-[24px] mb-10 lg:max-w-[55%]"
+        >
+          ВИЩЕ ХУДОЖНЄ ПРОФЕСІЙНО-ТЕХНІЧНЕ УЧИЛИЩЕ № 5 М. ВІННИЦІ / HIGHER ART
+          VOCATIONAL SCHOOL № 5, VINNYTSIA
+        </h2>
+
+        <div class="lg:flex lg:justify-between">
+          <div>
+            <div class="lg:flex lg:mb-5">
+              <h6
+                class="text-[#191715] text-[14px] font-[600] leading-[20px] mb-2 lg:min-w-[190px]"
+              >
+                АДРЕСА:
+              </h6>
+              <p
+                class="text-[#191715] text-[16px] font-[400] leading-[24px] mb-5 lg:mt-0 lg:mb-0"
+              >
+                21034, м. Вінниця, вул. Лебединського, 13
+              </p>
             </div>
-            <div>
-              <h4 class="text-xl font-medium text-gray-800 dark:text-gray-200">Lorem Adasdda Fkrhlaj</h4>
-              <p class="mt-1 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
-                elit.</p>
+
+            <div class="lg:flex lg:mb-5">
+              <h6
+                class="text-[#191715] text-[14px] font-[600] leading-[20px] mb-2 lg:min-w-[190px]"
+              >
+                ТЕЛЕФОН:
+              </h6>
+              <p
+                class="text-[#191715] text-[16px] font-[400] leading-[24px] mb-5 w-[190px] lg:mt-0 lg:mb-0"
+              >
+                +380 (432) 27-90-00, +380 (432) 27-87-00, +380 (432) 27-05-73
+              </p>
+            </div>
+
+            <div class="lg:flex lg:mb-5">
+              <h6
+                class="text-[#191715] text-[14px] font-[600] leading-[20px] mb-2 lg:min-w-[190px]"
+              >
+                E-MAIL:
+              </h6>
+              <p
+                class="text-[#191715] text-[16px] font-[400] leading-[24px] mb-5 lg:mt-0 lg:mb-0"
+              >
+                vhptu5@vhptu5.vn.ua
+              </p>
             </div>
           </div>
-          <div class="flex items-start mt-8 space-x-3">
-            <div class="flex items-center justify-center flex-shrink-0 mt-1 bg-indigo-500 rounded-md w-11 h-11 ">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                class="w-7 h-7 text-indigo-50">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
-                </path>
-              </svg>
-            </div>
-            <div>
-              <h4 class="text-xl font-medium text-gray-800 dark:text-gray-200">Lorem lorem lorem
-              </h4>
-              <p class="mt-1 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing
-                elit.</p>
-            </div>
-          </div>
-          <div class="flex items-start mt-8 space-x-3">
-            <div class="flex items-center justify-center flex-shrink-0 mt-1 bg-indigo-500 rounded-md w-11 h-11 ">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                class="w-7 h-7 text-indigo-50">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
-                </path>
-              </svg>
-            </div>
-            <div>
-              <h4 class="text-xl font-medium text-gray-800 dark:text-gray-200">Dark &amp; Lorem</h4>
-              <p class="mt-1 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Aperiam nostrum est dolore dolores quae adipisci eveniet erro</p>
-            </div>
+
+          <div class="flex flex-col items-center">
+            <div
+              class="bg-red-600 w-[273px] h-[148px] rounded-lg lg:w-[357px] lg:h-[184px]"
+            ></div>
+            <p
+              class="text-[#46464E] text-[14px] font-[400] leading-[20px] mt-[32px] mb-4 flex self-end lg:mt-10 lg:mb-[30px]"
+            >
+              @All rights reserved. 2022
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>  
+</body>

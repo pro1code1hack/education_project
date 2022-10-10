@@ -7,4 +7,5 @@ urlpatterns = [
     path('lessons/', views.LessonListView.as_view(), name='display_lessons'),
     path('lessons/<str:grade>', views.LessonListView.as_view(), name='lessons'),
     path('lesson/<int:pk>/', views.get_lesson, name='lesson'),
+    path('/', views.main_page, name='batya_profile')
 ]
